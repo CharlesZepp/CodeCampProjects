@@ -1,0 +1,73 @@
+.quotes{
+	display: none;
+}
+
+body{
+	margin: 50px 10px 0px 10px;
+}
+
+.pad{
+	padding: 10px 0px 10px 0px;
+}
+
+.color{
+	background-color: #ADD8E6; /*light blue*/
+}
+
+.galada {
+	font-family:'Galada';
+}
+
+
+/*
+img.pad{
+	padding-top: 20px;
+	}*/
+
+.foot {
+	border: 0; 
+	height: 2px; 
+	background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+	background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+	background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+	background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+
+#portfolio .grid {
+
+	padding:0;
+	max-width:90%;
+	list-style:none;
+	margin-top:20px;
+}
+
+#portfolio .grid li {
+
+	margin:20px;
+	max-width:600px;
+}
+#portfolio .grid li {
+
+ 	max-width:420px;
+}
+
+#portfolio img{
+	max-width:100%;
+	height:auto;
+	display:block;
+}
+
+#portfolio .grid {
+
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-ms-flex-flow:row wrap;
+	flex-flow:row wrap;
+	-ms-flex-pack:distribute;
+	justify-content:space-around;
+	-webkit-box-align:start;
+	-ms-flex-align:start;
+	align-items:flex-start;
+	margin:0 auto; 
+	}
