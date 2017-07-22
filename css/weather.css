@@ -1,0 +1,10 @@
+/*CSS for Weather App*/
+
+body{
+	background: blue;
+}
+
+#temp {
+	border: none;
+	background: none;
+}
