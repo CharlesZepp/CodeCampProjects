@@ -1,5 +1,7 @@
 /*Weather App Scripts*/
 
+//API used does a horrible job with icons, need to fix 
+
 var long, lat, C, F;
 
 //Uses HTML Geolocation API to get users location
@@ -26,24 +28,29 @@ function getWeather(long, lat){
 				description = result.weather[0].description;// global var of desc to be used in showDesc func
 				//tempuratures 
 				C = Math.round(result.main.temp);//celsius
-				F = Math.round(((result.main.temp) * 9/5)+32);//fahrenheit
-			$('#temp').html(C);
+				F = fahrenheit(C);//fahrenheit
+			$('#temp').html(F);
 			$('#icon').attr("src", result.weather[0].icon);//weather icon
 		}
 	});
 }
 
-//Change between Celsius and Fahrenheit
+//Change between Celsius and Fahrenheit symbol
 function changeCF(){
 	var current = $('#CF');//either C or F
 
-	if (current.html() == 'C'){
-		current.html('F');
-			$('#temp').html(F);
-	} else {
+	if (current.html() == 'F'){
 		current.html('C');
 			$('#temp').html(C);
+	} else {
+		current.html('F');
+			$('#temp').html(F);
 	}
+}
+
+//to fhrenheit
+function fahrenheit(temp){
+	return Math.round(((temp) * 9/5)+32);
 }
 
 //onhover functions for weather description
