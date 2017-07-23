@@ -8,10 +8,10 @@ function getLocation(){
 		navigator.geolocation.getCurrentPosition(function(position){
 			x = position.coords.longitude;
 			y = position.coords.latitude;
-			getWeather(x, y);
+				getWeather(x, y);
 		});
 	} else {
-		$('#location').html("Geolocation is not supported by this browser");
+		alert("Geolocation is not supported by this browser");
 	}
 }
 
@@ -20,38 +20,36 @@ function getWeather(long, lat){
 	$.ajax({
 		url:'https://fcc-weather-api.glitch.me/api/current?lat='+lat+'&lon='+long,
 		success: function(result){
-			console.log(result);
+			//console.log(result);
 			$('#location').html(result.name);
-			$('#weather').html(result.weather[0].main);
-
-			C = result.main.temp;
-			F = ((result.main.temp) * 9/5)+32;
+			$('#weather').html(result.weather[0].main);//main weather in area
+				description = result.weather[0].description;// global var of desc to be used in showDesc func
+				//tempuratures 
+				C = Math.round(result.main.temp);//celsius
+				F = Math.round(((result.main.temp) * 9/5)+32);//fahrenheit
 			$('#temp').html(C);
-
-
-			$('#icon').attr("src", result.weather[0].icon);
-			description = result.weather[0].description;
+			$('#icon').attr("src", result.weather[0].icon);//weather icon
 		}
 	});
 }
 
+//Change between Celsius and Fahrenheit
 function changeCF(){
-	var current = $('#CF');
+	var current = $('#CF');//either C or F
 
 	if (current.html() == 'C'){
 		current.html('F');
-		$('#temp').html(F);
+			$('#temp').html(F);
 	} else {
 		current.html('C');
-		$('#temp').html(C);
+			$('#temp').html(C);
 	}
 }
 
-
+//onhover functions for weather description
 function showDesc(){
 	$('#desc').html(description)
 }
-
 function removeDesc(){
 	$('#desc').html("");
 }

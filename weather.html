@@ -1,18 +1,18 @@
 <!DOCTYPE html>
+<!--Weather Appplication using Geolocation/ Weather API-->
 <html>
 <head>
 	<title>Weather App</title>
 	<meta charset="utf-8">
 	<script type="text/javascript" src="js/weather.js"></script>
-
 	<!--jQuery-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">	</script>
-
 	<!--Bootstrap-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<style type="text/css">
+		/*CSS added on top of BS*/
 		body {
 			padding-left: 15%;
 			padding-right: 15%;
@@ -38,23 +38,21 @@
 <body>
 	<div class="container-fluid">
 		<h1 class="text-center">Hows the Weather?</h1>
-		<div class="container-fluid">
-			<div style = "margin: auto;" class="display jumbotron">
-				<div class="row">
-					<div class="col-sm-4 text-center">
-						<img src="https://t3.ftcdn.net/jpg/01/40/21/84/240_F_140218457_aGn2ZI18QsmbukUSBKRlGF8kkSLkcJV2.jpg" height="75px" width="75px"><br>
-						<span id="location"></span>
-					</div>
-					<div class="col-sm-4 text-center">
-						<img id="icon" src="#" height="75px" width="75px"><br>
-						<span onmouseover="showDesc()" onmouseout="removeDesc()" id="weather"></span><br>
-						<i id="desc"></i>
-					</div>
-					<div class="col-sm-4 text-center">
-						<img style="margin-bottom: 10px" src="http://images.clipartpanda.com/thermometer-clip-art-medical_red_thermometer_1.png" height="65px" width="20px">
-						<br>
-						<span id="temp"></span><button onclick="changeCF()" id="CF">C</button>
-					</div>
+		<div class="display jumbotron">
+			<div class="row">
+				<div class="col-sm-4 text-center">
+					<img src="https://t3.ftcdn.net/jpg/01/40/21/84/240_F_140218457_aGn2ZI18QsmbukUSBKRlGF8kkSLkcJV2.jpg" height="75px" width="75px"><br>
+					<span id="location"></span>
+				</div>
+				<div class="col-sm-4 text-center">
+					<img id="icon" src="#" height="75px" width="75px"><br>
+					<span onmouseover="showDesc()" onmouseout="removeDesc()" id="weather"></span><br>
+					<i id="desc"></i>
+				</div>
+				<div class="col-sm-4 text-center">
+					<img style="margin-bottom: 10px" src="http://images.clipartpanda.com/thermometer-clip-art-medical_red_thermometer_1.png" height="65px" width="20px">
+					<br>
+					<span id="temp"></span><button onclick="changeCF()">&deg;<span data-toggle="tooltip" title="Convert Unit" id="CF">C</span></button>
 				</div>
 			</div>
 		</div>
@@ -63,7 +61,12 @@
 </body>
 <script type="text/javascript">
 	$(document).ready(function(){
+
+		//gets location and weather
 		getLocation();
+
+		//used as tooltip for C to F conversion
+		$('[data-toggle="tooltip"]').tooltip();
 	});
 </script>
 </html>
