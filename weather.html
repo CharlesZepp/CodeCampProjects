@@ -14,6 +14,8 @@
 
 	<style type="text/css">
 		body {
+			padding-left: 15%;
+			padding-right: 15%;
 			background: #00CED1;
 			font-size: 15px;
 		}
@@ -51,37 +53,17 @@
 					<div class="col-sm-4 text-center">
 						<img style="margin-bottom: 10px" src="http://images.clipartpanda.com/thermometer-clip-art-medical_red_thermometer_1.png" height="65px" width="20px">
 						<br>
-						<span id="temp"></span><button onclick="temp()" id="temp">C</button>
+						<span id="temp"></span><button onclick="changeCF()" id="CF">C</button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-	<!--
-			<div class="table-responsive">
-				<table class="table">
-					<tr>
-						<th>Location</th>
-						<th>Weather</th>
-						<th>Description</th>
-						<th>Temp <button onclick="temp();" id="celsius">C</button></th>
-					</tr>
-					<tbody>
-						<tr>
-							<th id="location"></th>
-							<th id="weather"></th>
-							<th id="desc"></th>
-							<th id="temp"></th>
-						</tr>
-					</tbody>
-				</table>
-			</div>-->
-
-		</body>
-		<script type="text/javascript">
-			$(document).ready(function(){
-				getLocation();
-			});
-		</script>
-		</html>
+	<footer class="text-center">Coded by Charles Zepp</footer>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		getLocation();
+	});
+</script>
+</html>
