@@ -4,48 +4,51 @@
 
 <html>
 <head>
-	<title>Random Quotes!!</title>
-	<link rel="stylesheet" type="text/css" href="css/rqm.css">
-	<script type="text/javascript" src="js/rqm.js"></script>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">	</script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <title>Random Quotes!!</title>
+ <link rel="stylesheet" type="text/css" href="css/rqm.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script type="text/javascript" src="js/rqm.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
 </head>
 <body>
-	<div class="box">
-		<div id="quote" class="quote">
-			<div class="content">
-				<i>"<span id="content"></span>"</i>
-			</div>
-			<div class="author">
-				<b>-<span id="author"></span></b>
-			</div>
-		</div>
-		<br>
-		<div class="buttons">
-			<a href="#" id ="tweet" title ="Tweet this quote!" class="button">
-				<i class="fa fa-twitter"></i>
-			</a>
-			<button class="button">New Quote</button>
-		</div>
-	</div>
-	<footer>
-		Developed by Charles Zepp
-	</footer>
-	<script type="text/javascript">
+ <div class="box">
 
-		$(document).ready(function(){
-			setDefault();
+  <div id="quote" class="quote">
+   <div class="content">
+    <i>"<span id="content"></span>"</i>
+   </div>
 
-			$('button').on('click', function(){
-				getQuote();
-				setQuote();
-			});
+   <div class="author">
+    <b>-<span id="author"></span></b>
+   </div>
 
-			$('#tweet').on('click', function(){
-				tweet();
-			});
+  </div>
+  <br>
+
+  <div class="buttons">
+   <a href="#" id ="tweet" title ="Tweet this quote!" class="button">
+    <i class="fa fa-twitter"></i>
+   </a>
+   <button class="button">New Quote</button>
+  </div>
+  
+ </div>
+ <footer>
+  Developed by Charles Zepp
+ </footer>
+<script type="text/javascript">
+	$(document).ready(function(){
+		setDefault();
+
+		$('button').on('click', function(){
+			getQuote();
+			setQuote();
 		});
-	</script>
+
+		$('#tweet').on('click', function(){
+			tweet();
+		});
+	});
+</script>
 </body>
 </html>

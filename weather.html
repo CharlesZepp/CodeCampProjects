@@ -2,17 +2,15 @@
 <!--Weather Appplication using Geolocation/ Weather API-->
 <html>
 <head>
-	<title>Weather App</title>
-	<meta charset="utf-8">
-	<script type="text/javascript" src="js/weather.js"></script>
-	<!--jQuery-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">	</script>
-	<!--Bootstrap-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-	<style type="text/css">
-		/*CSS added on top of BS*/
+ <title>Weather App</title>
+ <meta charset="utf-8">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script type="text/javascript" src="js/weather.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
+ <style type="text/css">
+ /*CSS added on top of BS*/
 		body {
 			padding: 5% 15% 0 15%;
 			background: #00CED1;
@@ -26,46 +24,41 @@
 		i{
 			font-size: 15px;
 		}
-
-	</style>
-
+ </style>
 </head>
 <body>
-	<div class="container-fluid">
-		<h1 class="text-center">Hows the Weather?</h1>
-		<div class="display jumbotron">
-			<div class="row">
-				<div class="col-sm-4 text-center">
-					<img src="http://www.freeiconspng.com/uploads/map-location-25.png" height="75px" width="75px"><br>
-					<p><span id="location"></span></p>
-				</div>
-				<div onmouseover="showDesc()" onmouseout="removeDesc()" class="col-sm-4 text-center">
-					<img id="icon" src="#" height="75px" width="75px"><br>
-					<p>
-						<span id="weather"></span><br>
-						<i id="desc"></i>
-					</p>
-				</div>
-				<div class="col-sm-4 text-center">
-					<a onclick="changeCF()" href="#" title="Convert Unit">
-						<img style="margin-bottom: 10px" src="http://images.clipartpanda.com/thermometer-clip-art-medical_red_thermometer_1.png" height="65px" width="20px">
-					</a>
-					<br>
-					<p>
-						<span id="temp"></span>&deg;<span id="CF">F</span>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<footer class="text-center">Coded by Charles Zepp</footer>
+ <div class="container-fluid">
+  <h1 class="text-center">Hows the Weather?</h1>
+   <div class="display jumbotron">
+    <div class="row">
+     <div class="col-sm-4 text-center">
+      <img src="http://www.freeiconspng.com/uploads/map-location-25.png" height="75px" width="75px"><br>
+      <p><span id="location"></span></p>
+     </div>
+    <div onmouseover="showDesc()" onmouseout="removeDesc()" class="col-sm-4 text-center">
+     <img id="icon" src="#" height="75px" width="75px"><br>
+     <p>
+      <span id="weather"></span><br>
+      <i id="desc"></i>
+     </p>
+    </div>
+    <div class="col-sm-4 text-center">
+     <a onclick="changeCF()" href="#" title="Convert Unit">
+     <img style="margin-bottom: 10px" src="http://images.clipartpanda.com/thermometer-clip-art-medical_red_thermometer_1.png" height="65px" width="20px"></a>
+     <br>
+     <p>
+      <span id="temp"></span>&deg;<span id="CF">F</span>
+     </p>
+    </div>
+   </div>
+  </div>
+ </div>
+ <footer class="text-center">Coded by Charles Zepp</footer>
 </body>
 <script type="text/javascript">
 	$(document).ready(function(){
-
 		//gets location and weather
 		getLocation();
-		
 	});
 </script>
 </html>
