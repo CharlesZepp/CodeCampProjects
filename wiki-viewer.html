@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Wiki Viewer</title>
+  <title>Wiki Viewer</title>
 
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
- <link rel="stylesheet" type="text/css" href="css/wiki-viewer.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/wiki-viewer.css">
 
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- <script type="text/javascript" src="js/wiki-viewer.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/wiki-viewer.js"></script>
 
 </head>
 <body>
- <div class="container-fluid">
-  <div class="row">
-   <div class="col-xs-12 text-center">
-    <img src="https://swe.umbc.edu/~zepp1/is448/codecamp_images/search1.gif">
-   </div>
-  </div>
-  <div class="row">
-   <div class="col-xs-12 text-center">
-    <input id="search-box" type="text" class="form-control" placeholder="Wikipedia Search">
-    <div class="buttons">
-     <button id="search" class="btn btn-primary">Search</button><!--glyphicon glyphicon-search-->
-     <button id="random" title="Random Search" class="btn btn-primary">Random</button>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <img src="https://swe.umbc.edu/~zepp1/is448/codecamp_images/search1.gif">
+      </div>
     </div>
-   </div>
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <input id="search-box" type="text" class="form-control" placeholder="Wikipedia Search">
+        <div class="buttons">
+          <button id="search" class="btn btn-primary">Search</button><!--glyphicon glyphicon-search-->
+          <button id="random" title="Random Search" class="btn btn-primary">Random</button>
+        </div>
+      </div>
+    </div>
   </div>
- </div>
- <div class="row">
-  <div class="col-xs-12 text-center">
-   <span id="view"></span>
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <span id="view"></span>
+    </div>
   </div>
- </div>
 </div>
 </body>
 <script type="text/javascript">
- $(document).ready(function(){
-  $('#search').on("click", function(){ search();});
-  $('#search-box').keypress(function(ev){
-   if(ev.keyCode == 13){search();}
+  $(document).ready(function(){
+    $('#search').on("click", function(){ search();});
+    $('#search-box').keypress(function(ev){
+      if(ev.keyCode == 13){search();}
+    });
+    $('#random').on("click", function(){window.location.assign('https://en.wikipedia.org/wiki/Special:Random')})
   });
-  $('#random').on("click", function(){window.location.assign('https://en.wikipedia.org/wiki/Special:Random')})
- });
 </script>
 </html>
