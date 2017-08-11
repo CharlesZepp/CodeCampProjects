@@ -1,2 +1,14 @@
 /*CSS for Weather App*/
-/*Not used*/
+body {
+	padding: 5% 15% 0 15%;
+	background: #00CED1;
+	font-size: 15px;
+}
+
+.display {
+	opacity: 0.75;
+}
+
+i {
+	font-size: 15px;
+}
