@@ -9,8 +9,13 @@ img{
 	height: 110px;
 }
 
-.container-fluid{
-	margin-top: 10%;
+#search-box{
+	width:45%;
+	margin: 0 auto;
+}
+
+.buttons {
+	padding-top: 4px;
 }
 
 .search-results{
@@ -21,23 +26,17 @@ img{
 	width: 65%;
 	text-align: center;
 }
+
 .search-results:hover{
 	border-left: 5px solid #87CEFA;
 }
+
 .results-name{
 	text-align: left;
 	padding-left: 10px;
 	font-size: 14pt;
 }
 
-.search-frame{
-	border:1px solid black;
-	text-align: center;
-}
-
-.search-frame input{
-	width: 30%;
-}
 .results-desc{
 	font-style: italic;
 	text-align: left;
@@ -56,16 +55,3 @@ a.block {
 a.block:hover{
 	background-color: #D3D3D3;
 }
-
-.input-group{
-	width:60%;
-	margin: 0 auto;
-}
-.input-group-addon button {
-	border: none;
-	background-color: inherit;
-}
-/*
-.input-group-addon button:hover {
-	background: #D3D3D3;
-}*/
