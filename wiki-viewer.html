@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Wiki Viewer</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+ <link rel="stylesheet" type="text/css" href="css/wiki-viewer.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script type="text/javascript" src="js/wiki-viewer.js"></script>
+</head>
+<body>
+ <div class="container-fluid">
+  <div class="row">
+   <div class="col-xs-12 text-center">
+    <span id="view"> <img src="https://swe.umbc.edu/~zepp1/is448/codecamp_images/search1.gif"></span>
+   </div>
+  </div>
+  <div class="row">
+   <div class="col-xs-12">
+    <div class="input-group">
+     <input id="search-box" type="text" class="form-control" placeholder="Wikipedia Search">
+     <span class="input-group-addon">
+      <button id="search" class="glyphicon glyphicon-search"></button>
+      <button title="Random Search" class="glyphicon glyphicon-random"></button>
+     </span>
+    </div>
+   </div>
+  </div>
+ </div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#search').on("click", function(){ search(); });
+		$('#search-box').keypress(function(ev){
+			if(ev.keyCode == 13){search();}
+		});
+	});
+</script>
+</html>
