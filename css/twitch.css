@@ -1,0 +1,50 @@
+/*CSS for twitch*/
+
+body {
+	background-color: #6441a5;
+}
+
+.account_status{
+	/*border: 2px solid grey;*/
+	background-color: #F0FFF0;
+	margin: 4px auto;
+	width: 50%;
+	padding: 5px;
+	background-image: none;
+	overflow: hidden;
+	white-space: nowrap; /* Don't forget this one */
+	text-overflow: ellipsis;
+}
+
+.head {
+	margin: 4px auto;
+	width: 50%;
+	color: #F0FFF0;
+}
+.row {
+	line-height: 40px;
+	text-align: center;
+}
+
+.logo {
+	max-height: 35px;
+	max-width: 35px;
+	border-radius: 50%; 
+}
+
+.name {
+	text-align: left;
+	padding-left: 10px;
+}
+
+.stat {
+	border-left: 2px solid grey;
+}
+
+.account_status a {
+	color: black;
+}
+
+#OFFLINE {
+	opacity: 0.65;
+}
